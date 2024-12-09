@@ -16,8 +16,9 @@ contract Staker {
 
   event Stake(address indexed staker, uint256 amount);
 
-  constructor(address exampleExternalContractAddress) {
+  constructor(address exampleExternalContractAddress, uint duration) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
+      deadline = block.timestamp + duration;
   }
 
   // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
@@ -32,7 +33,7 @@ contract Staker {
   // After some `deadline` allow anyone to call an `execute()` function
   // If the deadline has passed and the threshold is met, it should call `exampleExternalContract.complete{value: address(this).balance}()`
   function execute() public {
-    
+    console.log("fungsi di execute");
   }
 
 
