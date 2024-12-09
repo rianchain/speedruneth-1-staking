@@ -37,9 +37,7 @@ contract Staker {
 
     if(address(this).balance >= thresold) {
       exampleExternalContract.complete{value: address(this).balance}();
-    } else if (address(this).balance < 0) {
-      openForWithdraw = false;
-    } 
+    }
     else {
       openForWithdraw = true;
     }
@@ -51,6 +49,11 @@ contract Staker {
 
   // Add a `timeLeft()` view function that returns the time left before the deadline for the frontend
   function timeLeft() view public returns(uint256) {
+    if (block.timestamp >= deadline) {
+      return 0;
+    } else {
+      return deadline - block.timestamp;
+    }
     
   }
 

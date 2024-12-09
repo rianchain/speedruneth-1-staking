@@ -33,7 +33,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Staker: {
-      address: "0x809d550fca64d94Bd9F66E60752A544199cfAC3D",
+      address: "0x2bdCC0de6bE1f7D2ee689a0342D76F52E8EFABa3",
       abi: [
         {
           inputs: [
@@ -140,6 +140,19 @@ const deployedContracts = {
         {
           inputs: [],
           name: "thresold",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "timeLeft",
           outputs: [
             {
               internalType: "uint256",
