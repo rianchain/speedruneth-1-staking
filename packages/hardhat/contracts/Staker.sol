@@ -33,7 +33,11 @@ contract Staker {
   // After some `deadline` allow anyone to call an `execute()` function
   // If the deadline has passed and the threshold is met, it should call `exampleExternalContract.complete{value: address(this).balance}()`
   function execute() public {
-    console.log("fungsi di execute");
+    require(block.timestamp > deadline, "Deadline belum tercapai");
+
+    if(address(this).balance > threshold) {
+      ExampleExternalContract.complete{value: address(this).balance}();
+    }
   }
 
 
