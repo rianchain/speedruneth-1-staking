@@ -1,0 +1,76 @@
+{
+  "address": "0xE497942A4bbfCe9FcC8960e64Dd6700251a44e43",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "complete",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "completed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xd0ea89efa24f2c26a634e905a99bc531b7a6fb8edc9291afec106d493ede9a54",
+  "receipt": {
+    "to": null,
+    "from": "0xD6e7E34bF9739D9aE5b65BC71e53DA4d33D0e428",
+    "contractAddress": "0xE497942A4bbfCe9FcC8960e64Dd6700251a44e43",
+    "transactionIndex": 4,
+    "gasUsed": "87989",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x12aabd8b5971fda9cff71ac7bf7d44ba385b9f6eafc4b3618975ae29f454780b",
+    "transactionHash": "0xd0ea89efa24f2c26a634e905a99bc531b7a6fb8edc9291afec106d493ede9a54",
+    "logs": [],
+    "blockNumber": 20969549,
+    "cumulativeGasUsed": "374819",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "3e831603544844c627b392ba8a645b0f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"complete\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"completed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ExampleExternalContract.sol\":\"ExampleExternalContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ExampleExternalContract.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity 0.8.4;  //Do not change the solidity version as it negativly impacts submission grading\\r\\n\\r\\ncontract ExampleExternalContract {\\r\\n\\r\\n  bool public completed;\\r\\n\\r\\n  function complete() public payable {\\r\\n    completed = true;\\r\\n  }\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x3f34f25ef794e682417ff2b09ed1f44a571643cf672a62e63fe29ee0b9a088b7\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a08061001e6000396000f3fe60806040526004361060265760003560e01c8063522e117714602b5780639d9a7fe914603e575b600080fd5b603c6000805460ff19166001179055565b005b348015604957600080fd5b5060005460569060ff1681565b604051901515815260200160405180910390f3fea2646970667358221220b689d94927b1b97eee5c0a74a2ac79f4d95a978e6ed1a6491f619506b8c3fb7364736f6c63430008040033",
+  "deployedBytecode": "0x60806040526004361060265760003560e01c8063522e117714602b5780639d9a7fe914603e575b600080fd5b603c6000805460ff19166001179055565b005b348015604957600080fd5b5060005460569060ff1681565b604051901515815260200160405180910390f3fea2646970667358221220b689d94927b1b97eee5c0a74a2ac79f4d95a978e6ed1a6491f619506b8c3fb7364736f6c63430008040033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/ExampleExternalContract.sol:ExampleExternalContract",
+        "label": "completed",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}
