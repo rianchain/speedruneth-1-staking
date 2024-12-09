@@ -23,6 +23,7 @@ contract Staker {
   function stake() public payable {
     require(msg.value >= thresold, "Eth tidak cukup. Minimal 1 ETH");
     balances[msg.sender] += msg.value;
+    emit Stake(msg.sender, msg.value);
   } 
 
 
