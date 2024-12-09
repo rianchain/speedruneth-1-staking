@@ -19,6 +19,7 @@ contract Staker {
   // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
   // (Make sure to add a `Stake(address,uint256)` event and emit it for the frontend `All Stakings` tab to display)
   function stake() public payable {
+    require(msg.value >= thresold, "Eth tidak cukup. Minimal 1 ETH");
     balances[msg.sender] += msg.value;
   } 
 
