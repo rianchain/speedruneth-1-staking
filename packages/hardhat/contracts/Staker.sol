@@ -50,6 +50,9 @@ contract Staker {
 
 
   // Add a `timeLeft()` view function that returns the time left before the deadline for the frontend
+  function timeLeft() view public returns(uint256) {
+    
+  }
 
 
   // Add the `receive()` special function that receives eth and calls stake()
