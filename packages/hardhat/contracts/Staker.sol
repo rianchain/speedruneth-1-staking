@@ -45,9 +45,6 @@ contract Staker {
 
 
   // If the `threshold` was not met, allow everyone to call a `withdraw()` function to withdraw their balance
-  
-
-
   // Add a `timeLeft()` view function that returns the time left before the deadline for the frontend
   function timeLeft() view public returns(uint256) {
     if (block.timestamp >= deadline) {
@@ -55,6 +52,11 @@ contract Staker {
     } else {
       return deadline - block.timestamp;
     }
+    
+  }
+
+
+  function withdraw() public {
     
   }
 
