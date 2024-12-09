@@ -57,7 +57,12 @@ contract Staker {
 
 
   function withdraw() public {
-    
+    require(openForWithdraw, "Withdraw tidak bisa saat ini!");
+    uint256 amount = balances[msg.sender];
+    require(amount > 0, "Tidak ada saldo untuk ditarik");
+
+    balances[msg.sender] = 0;
+    payable(msg.sender).transfer(amount);
   }
 
 
