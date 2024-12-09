@@ -14,11 +14,12 @@ contract Staker {
 
   uint256 public deadline = block.timestamp + 30 seconds;
 
+  bool public openForWithdraw = false;
+
   event Stake(address indexed staker, uint256 amount);
 
   constructor(address exampleExternalContractAddress, uint duration) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
-      deadline = block.timestamp + duration;
   }
 
   // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
@@ -37,6 +38,8 @@ contract Staker {
 
     if(address(this).balance > threshold) {
       ExampleExternalContract.complete{value: address(this).balance}();
+    } else {
+      
     }
   }
 
