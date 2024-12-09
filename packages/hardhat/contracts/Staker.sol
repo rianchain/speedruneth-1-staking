@@ -18,14 +18,13 @@ contract Staker {
 
   event Stake(address indexed staker, uint256 amount);
 
-  constructor(address exampleExternalContractAddress, uint duration) {
+  constructor(address exampleExternalContractAddress) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
   }
 
   // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
   // (Make sure to add a `Stake(address,uint256)` event and emit it for the frontend `All Stakings` tab to display)
   function stake() public payable {
-    require(msg.value >= thresold, "Eth tidak cukup. Minimal 1 ETH");
     balances[msg.sender] += msg.value;
     emit Stake(msg.sender, msg.value);
   } 
@@ -36,8 +35,8 @@ contract Staker {
   function execute() public {
     require(block.timestamp > deadline, "Deadline belum tercapai");
 
-    if(address(this).balance > threshold) {
-      ExampleExternalContract.complete{value: address(this).balance}();
+    if(address(this).balance >= thresold) {
+      exampleExternalContract.complete{value: address(this).balance}();
     } else {
       openForWithdraw = true;
     }
