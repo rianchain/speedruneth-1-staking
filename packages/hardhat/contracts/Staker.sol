@@ -12,6 +12,8 @@ contract Staker {
 
   uint256 public constant thresold = 1 ether;
 
+  uint256 public deadline = block.timestamp + 30 seconds;
+
   event Stake(address indexed staker, uint256 amount);
 
   constructor(address exampleExternalContractAddress) {
