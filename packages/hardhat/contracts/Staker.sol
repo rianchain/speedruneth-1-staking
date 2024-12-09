@@ -8,6 +8,8 @@ contract Staker {
 
   ExampleExternalContract public exampleExternalContract;
 
+  mapping (address => uint256) public balances;
+
   constructor(address exampleExternalContractAddress) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
   }
