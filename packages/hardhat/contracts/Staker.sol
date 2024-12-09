@@ -67,5 +67,8 @@ contract Staker {
 
 
   // Add the `receive()` special function that receives eth and calls stake()
+  function receive() external payable {
+
+  }
 
 }
