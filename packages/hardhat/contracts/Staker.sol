@@ -39,7 +39,7 @@ contract Staker {
     if(address(this).balance > threshold) {
       ExampleExternalContract.complete{value: address(this).balance}();
     } else {
-      
+      openForWithdraw = true;
     }
   }
 
